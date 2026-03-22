@@ -15,7 +15,7 @@ import vscodeIcon from "@/assets/icons/vscode.png";
 import netIcon from "@/assets/icons/net.png";
 import SQLIcon from "@/assets/icons/sql.png";
 import CursorIcon from "@/assets/icons/cursor.png";
-import CSharpIcon from "@/assets/icons/csharp.png";
+import CSharpIcon from "@/assets/icons/Csharp.png";
 import JiraIcon from "@/assets/icons/jira.png";
 
 const skills = [
