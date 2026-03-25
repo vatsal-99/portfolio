@@ -248,7 +248,7 @@ const achievements = [
                         <div
                           key={index}
                           className={`
-                            min-h-[20px] flex items-start
+                           flex items-start
                             ${index < currentCodeLine ? "opacity-100" : "opacity-0"}
                             ${index === currentCodeLine ? "opacity-100" : ""}
                             transition-opacity duration-150 ease-in-out
