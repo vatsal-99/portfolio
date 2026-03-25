@@ -241,14 +241,14 @@ const achievements = [
                   <div className="w-4 h-4 bg-green-400/20 rounded-full animate-pulse"></div>
                 </div>
 
-                <div className="font-mono text-sm bg-muted/40 rounded-lg border border-border min-h-[240px] flex">
+                <div className="font-mono text-sm bg-muted/40 rounded-lg border border-border h-[320px] flex">
                   <div className="p-6 w-full">
                     <div className="grid grid-cols-1 gap-1 h-full content-start">
                       {codeSnippets.map((line, index) => (
                         <div
                           key={index}
                           className={`
-                           flex items-start
+                           flex items-center whitespace-nowrap overflow-hidden
                             ${index < currentCodeLine ? "opacity-100" : "opacity-0"}
                             ${index === currentCodeLine ? "opacity-100" : ""}
                             transition-opacity duration-150 ease-in-out
