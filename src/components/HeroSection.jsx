@@ -51,7 +51,7 @@ const achievements = [
 
   const handleViewResume = () => {
     // Open resume in new tab
-    window.open('/Vatsal-Chandrani-Resume.pdf', '_blank', 'noopener,noreferrer');
+    window.open('/Vatsal_Chandrani_Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (

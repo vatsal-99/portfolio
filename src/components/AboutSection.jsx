@@ -93,8 +93,8 @@ const tabContent = {
   // Programmatic download function
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Vatsal-Chandrani-Resume.pdf'; // Must be in public folder
-    link.download = 'Vatsal-Chandrani-Resume.pdf';
+    link.href = '/Vatsal_Chandrani_Resume.pdf'; // Must be in public folder
+    link.download = 'Vatsal_Chandrani_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

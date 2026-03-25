@@ -148,7 +148,7 @@ export const Footer = () => {
                 site, formatted for recruiters.
               </p>
               <a
-                href="/Vatsal-Chandrani-Resume.pdf"
+                href="/Vatsal_Chandrani_Resume.pdf"
                 download
                 className="inline-flex w-full hover:border-primary/70 hover:text-primary/90 justify-center px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary bg-transparent hover:bg-primary/10 transition-all duration-300"
               >
