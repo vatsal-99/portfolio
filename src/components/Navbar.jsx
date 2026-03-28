@@ -23,6 +23,14 @@ const navItems = [
   // { name: "Blog", href: "https://blogni.vercel.app", icon: BookOpen },
 ];
 
+const iconBtn =
+  "flex p-2 rounded-full backdrop-blur-md border shadow-sm items-center justify-center transition " +
+  "bg-white/80 dark:bg-black/70 " +
+  "text-gray-700 dark:text-gray-300 " +
+  "border-gray-200 dark:border-gray-700 " +
+  "hover:bg-gray-100 dark:hover:bg-gray-800"+
+  "transition-all duration-200";
+
 const ThemeToggle = () => {
   const [theme, setTheme] = useState("dark");
 
@@ -184,12 +192,7 @@ export const Navbar = () => {
               href="https://github.com/vatsal-99"
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(
-                "flex p-2 rounded-full bg-white/80 dark:bg-black/70 backdrop-blur-md",
-                "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700/60",
-                "border border-gray-200 dark:border-gray-700 shadow-sm",
-                "items-center justify-center",
-              )}
+              className={iconBtn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               title="GitHub Profile"
@@ -202,12 +205,7 @@ export const Navbar = () => {
               href="https://linkedin.com/in/vatsal-chandrani"
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(
-                "flex p-2 rounded-full bg-white/80 dark:bg-black/70 backdrop-blur-md",
-                "text-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900/40",
-                "border border-gray-200 dark:border-gray-700 shadow-sm",
-                "items-center justify-center",
-              )}
+              className={iconBtn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               title="LinkedIn Profile"

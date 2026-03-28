@@ -150,6 +150,8 @@ export const Footer = () => {
               <a
                 href="/Vatsal_Chandrani_Resume.pdf"
                 download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex w-full hover:border-primary/70 hover:text-primary/90 justify-center px-4 py-2 rounded-md text-sm font-medium border border-primary text-primary bg-transparent hover:bg-primary/10 transition-all duration-300"
               >
                 Download resume

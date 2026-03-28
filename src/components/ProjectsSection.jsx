@@ -2,88 +2,271 @@ import { ArrowRight, ExternalLink, Github, ChevronUp, Star, Code, ChevronDown, M
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
+// const projects = [
+//   {
+//     id: 1,
+//     title: "Public Safety Software Platform",
+//     category: "Enterprise",
+//     description:
+//       "Enterprise software used in public safety—incident and records workflows, dispatch-facing features, and integrations with other agency systems.",
+//     image: "/projects/project1.jpg",
+//     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     featured: true,
+//     accentColor: "from-orange-500 to-amber-500",
+//     status: "Live",
+//     highlights: [
+//       "React modules for incident and records management",
+//       "Real-time updates for dispatch and reporting teams",
+//       "Secure, service-based integrations across systems",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     title: "Records Management System (RMS)",
+//     category: "Enterprise",
+//     description:
+//       "Modern RMS platform for managing offender records, arrests, charges, bookings, and case history—built with real-time architecture and integrated with CAD systems.",
+//     image: "/projects/project6.png",
+//     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     featured: true,
+//     accentColor: "from-red-500 to-orange-500",
+//     status: "Live",
+//     highlights: [
+//       "Complete offender lifecycle: booking → charges → case tracking",
+//       "Real-time updates using Socket.IO across multiple users",
+//       "Integrated with CAD for seamless incident-to-record conversion",
+//       "Advanced search, reporting, and audit logs",
+//     ],
+//   },
+//   {
+//     id: 3,
+//     title: "Offender Management System (OMS)",
+//     category: "Enterprise",
+//     description:
+//       "Desktop-based offender management system for handling bookings, custody tracking, and record maintenance with robust backend services and offline capabilities.",
+//     image: "/projects/project7.png",
+//     tags: ["C#", ".NET", "WPF", "Service Worker", "SQL Server"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     featured: true,
+//     accentColor: "from-indigo-500 to-blue-500",
+//     status: "Live",
+//     highlights: [
+//       "WPF-based desktop interface for secure law enforcement usage",
+//       "Service worker for background processing and sync",
+//       "Efficient offender tracking and custody management",
+//       "Reliable performance in low or offline network conditions",
+//     ],
+//   },
+//   {
+//     id: 3,
+//     title: "Document E‑Commerce Platform",
+//     category: "E‑Commerce",
+//     description:
+//       "NopCommerce-based document marketplace: subscriptions, digital delivery, and integrations with CRM and payment providers.",
+//     image: "/projects/project2.png",
+//     tags: ["ASP.NET", "REST APIs", "Payments", "E-sign APIs"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     featured: true,
+//     accentColor: "from-orange-500 to-rose-500",
+//     status: "Live",
+//     highlights: [
+//       "Custom extensions for document workflows",
+//       "Payment gateway and e-signature integrations",
+//       "Dynamics CRM sync for customers and orders",
+// 0    ],
+//   },
+//   {
+//     id: 4,
+//     title: "Performance Management System",
+//     category: "Enterprise",
+//     description:
+//       "HR performance platform: goals, reviews, 360° feedback, and reporting for people leaders.",
+//     image: "/projects/project3.png",
+//     tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     accentColor: "from-amber-500 to-emerald-500",
+//     status: "Live",
+//     highlights: [
+//       "Review cycles, goals, and employee dashboards",
+//       "Backend services and SQL reporting for HR metrics",
+//       "Role-based access for managers and staff",
+//     ],
+//   },
+//   {
+//     id: 5,
+//     title: "Timesheet Management System",
+//     category: "Enterprise",
+//     description:
+//       "Timesheets, approvals, and utilization reporting for project-based teams—replacing spreadsheet-heavy processes.",
+//     image: "/projects/project4.png",
+//     tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     accentColor: "from-orange-500 to-indigo-500",
+//     status: "Live",
+//     highlights: [
+//       "Task logging and approval workflows",
+//       "Reporting dashboards for time and projects",
+//       "APIs for secure processing and exports",
+//     ],
+//   },
+//   {
+//     id: 6,
+//     title: "WhatsApp auto-reply system",
+//     category: "Personal",
+//     description:
+//       "Side project: automated replies and real-time messaging flows on WhatsApp so inbound messages get handled without manual back-and-forth.",
+//     image: "/projects/project5.png",
+//     tags: ["Python", "Automation", "APIs"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     featured: false,
+//     accentColor: "from-slate-500 to-zinc-600",
+//     status: "Side project",
+//     highlights: [
+//       "Configurable auto-replies",
+//       "Real-time message handling",
+//       "Built as a practical integration exercise",
+//     ],
+//   },
+// ];
+
+
 const projects = [
   {
     id: 1,
-    title: "Public Safety Software Platform",
+    title: "Computer-Aided Dispatch (CAD)",
     category: "Enterprise",
     description:
-      "Enterprise software used in public safety—incident and records workflows, dispatch-facing features, and integrations with other agency systems.",
-    image: "/projects/project1.jpg",    
-    tags: ["React", "ASP.NET Core", "C#", "SQL Server", "REST APIs"],
+      "CAD system for managing calls, events, unit dispatch, and real-time incident tracking across agencies.",
+    image: "/projects/project1.jpg",
+    tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
     demoUrl: "#",
     githubUrl: "#",
     featured: true,
     accentColor: "from-orange-500 to-amber-500",
     status: "Live",
     highlights: [
-      "React modules for incident and records management",
-      "Real-time updates for dispatch and reporting teams",
-      "Secure, service-based integrations across systems",
+      "Call intake, event creation, and dispatch workflows",
+      "Real-time unit status and incident updates",
+      "CAD to RMS integration for record creation",
+      "Secure role-based access with audit tracking",
     ],
   },
   {
     id: 2,
-    title: "Document E‑Commerce Platform",
-    category: "E‑Commerce",
+    title: "Records Management System (RMS)",
+    category: "Enterprise",
     description:
-      "NopCommerce-based document marketplace: subscriptions, digital delivery, and integrations with CRM and payment providers.",
-    image: "/projects/project2.png",    
-    tags: ["ASP.NET", "REST APIs", "Payments", "E-sign APIs"],
+      "RMS for managing incidents, citations, warrants, and NIBRS reporting with real-time updates and CAD integration.",
+    image: "/projects/project2.png",
+    tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: true,
+    accentColor: "from-red-500 to-orange-500",
+    status: "Live",
+    highlights: [
+      "Incident, citation, and warrant record workflows",
+      "Real-time updates across users and departments",
+      "CAD to RMS integration for record creation",
+      "NIBRS reporting with search and data validation",
+    ],
+  },
+  {
+    id: 3,
+    title: "Offender Management System (OMS)",
+    category: "Enterprise",
+    description:
+      "Desktop OMS for managing booking, subjects, jail operations, and custody tracking with reliable performance and offline support.",
+    image: "/projects/project3.png",
+    tags: ["C#", ".NET", "WPF", "Service Worker", "SQL Server"],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: true,
+    accentColor: "from-indigo-500 to-blue-500",
+    status: "Live",
+    highlights: [
+      "Booking, subject, and jail management workflows",
+      "Real-time custody tracking and status updates",
+      "Background services for data sync and processing",
+      "Optimized for secure and offline desktop usage",
+    ],
+  },
+  {
+    id: 4,
+    title: "Document E-Commerce Platform",
+    category: "E-Commerce",
+    description:
+      "Document marketplace with subscriptions, digital delivery, and CRM and payment integrations.",
+    image: "/projects/project4.png",
+    tags: ["ASP.NET", "REST APIs", "Payments", "PostgreSQL"],
     demoUrl: "#",
     githubUrl: "#",
     featured: true,
     accentColor: "from-orange-500 to-rose-500",
     status: "Live",
     highlights: [
-      "Custom extensions for document workflows",
-      "Payment gateway and e-signature integrations",
-      "Dynamics CRM sync for customers and orders",
-    ],
-  },
-  {
-    id: 3,
-    title: "Performance Management System",
-    category: "Enterprise",
-    description:
-      "HR performance platform: goals, reviews, 360° feedback, and reporting for people leaders.",
-    image: "/projects/project3.png",    
-    tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
-    demoUrl: "#",
-    githubUrl: "#",
-    accentColor: "from-amber-500 to-emerald-500",
-    status: "Live",
-    highlights: [
-      "Review cycles, goals, and employee dashboards",
-      "Backend services and SQL reporting for HR metrics",
-      "Role-based access for managers and staff",
-    ],
-  },
-  {
-    id: 4,
-    title: "Timesheet Management System",
-    category: "Enterprise",
-    description:
-      "Timesheets, approvals, and utilization reporting for project-based teams—replacing spreadsheet-heavy processes.",
-    image: "/projects/project4.png",    
-    tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
-    demoUrl: "#",
-    githubUrl: "#",
-    accentColor: "from-orange-500 to-indigo-500",
-    status: "Live",
-    highlights: [
-      "Task logging and approval workflows",
-      "Reporting dashboards for time and projects",
-      "APIs for secure processing and exports",
+      "Document purchase and delivery workflows",
+      "Payment and e-signature integrations",
+      "CRM sync for users and transactions",
+      "Secure and scalable backend services",
     ],
   },
   {
     id: 5,
-    title: "WhatsApp auto-reply system",
+    title: "Performance Management System",
+    category: "Enterprise",
+    description:
+      "HR system for goals, reviews, and 360° feedback with reporting and role-based access.",
+    image: "/projects/project5.png",
+    tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: true,
+    accentColor: "from-amber-500 to-emerald-500",
+    status: "Live",
+    highlights: [
+      "Goal setting and review cycle workflows",
+      "360° feedback for employees and managers",
+      "Reporting dashboards and analytics",
+      "Role-based access and permissions",
+    ],
+  },
+  {
+    id: 6,
+    title: "Timesheet Management System",
+    category: "Enterprise",
+    description:
+      "Timesheet and project tracking system with task logging, approvals, and utilization reporting.",
+    image: "/projects/project6.png",
+    tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: true,
+    accentColor: "from-orange-500 to-indigo-500",
+    status: "Live",
+    highlights: [
+      "Task logging and approval workflows",
+      "Project and utilization reporting",
+      "APIs for data processing and exports",
+      "Replaced manual spreadsheet tracking",
+    ],
+  },
+  {
+    id: 7,
+    title: "WhatsApp Auto-Reply System",
     category: "Personal",
     description:
-      "Side project: automated replies and real-time messaging flows on WhatsApp so inbound messages get handled without manual back-and-forth.",
-    image: "/projects/project5.png",    
+      "Automation system for handling WhatsApp messages with real-time responses, enabling efficient communication without manual intervention.",
+    image: "/projects/project7.png",
     tags: ["Python", "Automation", "APIs"],
     demoUrl: "#",
     githubUrl: "#",
@@ -91,9 +274,50 @@ const projects = [
     accentColor: "from-slate-500 to-zinc-600",
     status: "Side project",
     highlights: [
-      "Configurable auto-replies",
+      "Automated reply workflows for messages",
       "Real-time message handling",
-      "Built as a practical integration exercise",
+      "Configurable rules and triggers",
+      "Built for automation and integration practice",
+    ],
+  },
+  {
+    id: 8,
+    title: "Finance Data Analysis",
+    category: "Personal",
+    description:
+      "Data analysis project exploring financial datasets using Python for insights, visualization, and trend analysis.",
+    image: "/projects/project8.png",
+    tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
+    demoUrl: "#",
+    githubUrl: "#",
+    featured: false,
+    accentColor: "from-green-500 to-emerald-600",
+    status: "Capstone",
+    highlights: [
+      "Analyzed financial datasets for trends and patterns",
+      "Data cleaning and transformation using Pandas",
+      "Visualized insights with charts and graphs",
+      "Explored correlations and performance metrics",
+    ],
+  },
+  {
+    id: 9,
+    title: "Civil Engineering Calculators",
+    category: "Personal",
+    description:
+      "Web-based calculator platform for civil engineering formulas and calculations for students and professionals.",
+    image: "/projects/project9.png",
+    tags: ["ASP","C#","HTML", "CSS", "JS","ChartJs"],
+    demoUrl: "https://www.civil-engineering-calculators.com/",
+    githubUrl: "#",
+    featured: false,
+    accentColor: "from-blue-500 to-cyan-500",
+    status: "College project",
+    highlights: [
+      "Built multiple civil engineering calculation tools",
+      "Simple and user-friendly web interface",
+      "Covers common formulas for quick calculations",
+      "Designed for students and professionals",
     ],
   },
 ];
@@ -162,8 +386,8 @@ export const ProjectsSection = () => {
   );
 
   return (
-    <section 
-      id="projects" 
+    <section
+      id="projects"
       className="relative min-h-screen py-16 md:py-24 overflow-hidden bg-gradient-to-br from-background via-background to-primary/5"
       ref={sectionRef}
     >
@@ -174,14 +398,14 @@ export const ProjectsSection = () => {
 
       <div className="container mx-auto px-6 max-w-7xl relative">
         {/* Header */}
-          <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -192,7 +416,7 @@ export const ProjectsSection = () => {
             Projects
           </motion.div>
 
-          <motion.h2 
+          <motion.h2
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -203,19 +427,21 @@ export const ProjectsSection = () => {
             <span className="block text-primary">Project Portfolio</span>
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Production work from public safety and HR platforms to commerce—React on the UI, ASP.NET and SQL behind it, plus a personal WhatsApp automation build.
+            Production work from public safety and HR platforms to
+            commerce—React on the UI, ASP.NET and SQL behind it, plus a personal
+            WhatsApp automation build.
           </motion.p>
         </motion.div>
 
         {/* Simple Filter */}
-        <motion.div 
+        <motion.div
           className="flex justify-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -251,18 +477,17 @@ export const ProjectsSection = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: index * 0.1,
                   type: "spring",
-                  stiffness: 100
+                  stiffness: 100,
                 }}
                 className="group"
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
                 <div className="relative bg-background border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 h-full flex flex-col">
-                  
                   {/* Image/Video Section */}
                   <div className="relative h-48 overflow-hidden">
                     <motion.img
@@ -271,32 +496,38 @@ export const ProjectsSection = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
-                    
+
                     {/* Status Badge */}
                     <div className="absolute top-3 right-3">
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
-                        project.status === "Live" 
-                          ? "bg-emerald-500/20 text-emerald-600 border border-emerald-500/30"
-                          : "bg-amber-500/20 text-amber-600 border border-amber-500/30"
-                      }`}>
+                      <div
+                        className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${
+                          project.status === "Live"
+                            ? "bg-emerald-500/20 text-emerald-600 border border-emerald-500/30"
+                            : "bg-amber-500/20 text-amber-600 border border-amber-500/30"
+                        }`}
+                      >
                         {project.status}
                       </div>
                     </div>
 
                     {/* Category Badge */}
                     <div className="absolute top-3 left-3">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm border ${categoryColors[project.category]}`}>
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-medium border backdrop-blur-md
+                        bg-white/80 dark:bg-black/60
+                        text-gray-800 dark:text-gray-200 ${categoryColors[project.category]}`}
+                      >
                         {project.category}
                       </span>
                     </div>
 
                     {/* Hover Actions */}
-                    <motion.div 
+                    {/* <motion.div 
                       className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: hoveredProject === project.id ? 1 : 0 }}
                     >
-                      {/* Video Play Button */}
+                      // Video Play Button 
                       <motion.button
                         onClick={() => handleVideoPlay(project)}
                         whileHover={{ scale: 1.1 }}
@@ -304,9 +535,9 @@ export const ProjectsSection = () => {
                         className="p-3 rounded-full backdrop-blur-sm border bg-white/20 text-white border-white/30 hover:bg-white/30 transition-all duration-300"
                       >
                         <Play size={20} />
-                      </motion.button>
+                      </motion.button> 
                       
-                      {/* Code Button */}
+                      {/* Code Button 
                       <motion.a
                         href={project.githubUrl}
                         target="_blank"
@@ -322,7 +553,7 @@ export const ProjectsSection = () => {
                       >
                         <Code size={20} />
                       </motion.a>
-                    </motion.div>
+                    </motion.div> */}
                   </div>
 
                   {/* Content Section */}
@@ -332,13 +563,13 @@ export const ProjectsSection = () => {
                         {project.title}
                       </h3>
                       {project.featured && (
-                        <motion.div 
+                        <motion.div
                           className="flex items-center gap-1 px-2 py-1 rounded-full bg-amber-500/20 text-amber-600 text-xs font-medium border border-amber-500/30"
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: index * 0.1 + 0.3 }}
                         >
-                          <Star size={12} className="fill-amber-500" /> 
+                          <Star size={12} className="fill-amber-500" />
                           Featured
                         </motion.div>
                       )}
@@ -360,7 +591,9 @@ export const ProjectsSection = () => {
                           key={tagIndex}
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.1 + tagIndex * 0.05 + 0.4 }}
+                          transition={{
+                            delay: index * 0.1 + tagIndex * 0.05 + 0.4,
+                          }}
                           className="px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-medium border border-primary/20"
                         >
                           {tag}
@@ -381,12 +614,14 @@ export const ProjectsSection = () => {
                             ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
                             : "bg-primary text-primary-foreground hover:bg-primary/90"
                         }`}
-                        onClick={(e) => project.demoUrl === "#" && e.preventDefault()}
+                        onClick={(e) =>
+                          project.demoUrl === "#" && e.preventDefault()
+                        }
                       >
                         <Eye size={16} />
                         {project.demoUrl === "#" ? "Coming Soon" : "Live Demo"}
                       </motion.a>
-                      
+
                       <motion.a
                         href={project.githubUrl}
                         target="_blank"
@@ -398,7 +633,9 @@ export const ProjectsSection = () => {
                             ? "bg-muted text-muted-foreground cursor-not-allowed border-border"
                             : "bg-background text-foreground border-border hover:border-primary hover:bg-primary/5"
                         }`}
-                        onClick={(e) => project.githubUrl === "#" && e.preventDefault()}
+                        onClick={(e) =>
+                          project.githubUrl === "#" && e.preventDefault()
+                        }
                       >
                         <Github size={16} />
                         Code
@@ -407,7 +644,9 @@ export const ProjectsSection = () => {
                   </div>
 
                   {/* Accent Border */}
-                  <div className={`h-1 bg-gradient-to-r ${project.accentColor}`} />
+                  <div
+                    className={`h-1 bg-gradient-to-r ${project.accentColor}`}
+                  />
                 </div>
               </motion.div>
             ))}
@@ -416,7 +655,7 @@ export const ProjectsSection = () => {
 
         {/* Load More */}
         {filteredProjects.length > 3 && (
-          <motion.div 
+          <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -449,7 +688,7 @@ export const ProjectsSection = () => {
         )}
 
         {/* Simple CTA */}
-        <motion.div 
+        <motion.div
           className="text-center mt-20"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -467,12 +706,14 @@ export const ProjectsSection = () => {
               Get In Touch
             </motion.div>
 
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Like what you see?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Like what you see?
+            </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Open to roles where React meets solid APIs and databases full stack,
-              product-minded, and delivery-focused.
+              Open to roles where React meets solid APIs and databases full
+              stack, product-minded, and delivery-focused.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <motion.a
                 href="#contact"
@@ -483,7 +724,7 @@ export const ProjectsSection = () => {
                 Contact Me
                 <ArrowRight size={18} />
               </motion.a>
-              
+
               <motion.a
                 href="https://github.com/vatsal-99"
                 target="_blank"
@@ -492,7 +733,7 @@ export const ProjectsSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-medium border border-border text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300"
               >
-                    <Github size={18} />
+                <Github size={18} />
                 View GitHub
               </motion.a>
             </div>
@@ -570,7 +811,9 @@ export const ProjectsSection = () => {
                           ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
                           : "bg-primary text-primary-foreground hover:bg-primary/90"
                       }`}
-                      onClick={(e) => selectedVideo.demoUrl === "#" && e.preventDefault()}
+                      onClick={(e) =>
+                        selectedVideo.demoUrl === "#" && e.preventDefault()
+                      }
                     >
                       Visit Live Site
                     </motion.a>
@@ -585,7 +828,9 @@ export const ProjectsSection = () => {
                           ? "bg-muted text-muted-foreground cursor-not-allowed border-border"
                           : "bg-background text-foreground border-border hover:border-primary hover:bg-primary/5"
                       }`}
-                      onClick={(e) => selectedVideo.githubUrl === "#" && e.preventDefault()}
+                      onClick={(e) =>
+                        selectedVideo.githubUrl === "#" && e.preventDefault()
+                      }
                     >
                       View Code
                     </motion.a>
