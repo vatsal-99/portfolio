@@ -23,9 +23,9 @@ const codeSnippets = [
 
 const achievements = [
   { number: "5+", label: "Years of Experience", icon: <Shield className="h-3 w-3" /> },
-  { number: "25+", label: "Projects & Integrations", icon: <Briefcase className="h-3 w-3" /> },
+  { number: "20+", label: "Projects & Integrations", icon: <Briefcase className="h-3 w-3" /> },
   { number: "10+", label: "Technologies Mastered", icon: <TrendingUp className="h-3 w-3" /> },
-  { number: "8+", label: "AI & Automation Solutions", icon: <Zap className="h-3 w-3" /> },
+  { number: "4+", label: "AI & Automation Solutions", icon: <Zap className="h-3 w-3" /> },
 ];
 
   useEffect(() => {

@@ -233,31 +233,32 @@ export const Navbar = () => {
             />
 
             <motion.aside
-              className="absolute top-0 left-0 h-full w-72 max-w-[85vw] 
-             bg-white dark:bg-black 
-             border-r border-gray-200 dark:border-gray-800 
-             shadow-xl flex flex-col"
+              className="absolute top-0 left-0 h-full w-72 max-w-[85vw]
+              bg-background border-r border-border shadow-xl flex flex-col"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 24 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="h-full rounded-2xl border border-gray-200/70 dark:border-gray-800/70 bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-xl overflow-hidden flex flex-col">
-                {/* Mobile menu brand */}
-                <div className="p-4 border-b border-gray-200/60 dark:border-gray-800/60">
+              <div className="h-full flex flex-col">
+                {/* Header */}
+                <div className="p-4 border-b border-border">
                   <div className="flex items-center gap-3">
+                    {/* Logo */}
                     <div
                       className="h-10 w-10 rounded-full overflow-hidden
-                      bg-background border border-border
-                      flex items-center justify-center shadow-md"
+                      bg-card border border-border
+                      flex items-center justify-center shadow-sm"
                     >
                       <img
                         src="/logo.png"
                         alt="logo"
-                        className="w-[90%] h-[90%] object-contain"
+                        className="w-[85%] h-[85%] object-contain"
                       />
                     </div>
+
+                    {/* Name */}
                     <div className="flex flex-col leading-tight">
                       <span className="text-sm font-semibold text-foreground">
                         Vatsal Chandrani
@@ -269,6 +270,7 @@ export const Navbar = () => {
                   </div>
                 </div>
 
+                {/* Menu */}
                 <div className="p-2 flex-1 overflow-y-auto">
                   {navItems
                     .filter((item) => item.href.startsWith("#"))
@@ -278,10 +280,11 @@ export const Navbar = () => {
                         href={item.href}
                         onClick={() => setIsOpen(false)}
                         className={cn(
-                          "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors",
+                          "flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all",
+
                           activeSection === item.href
                             ? "bg-primary text-primary-foreground"
-                            : "text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800",
+                            : "text-foreground hover:bg-muted/50",
                         )}
                       >
                         <item.icon className="w-4 h-4" />

@@ -9,18 +9,18 @@ export const AboutSection = () => {
 
   const achievements = [
     { number: "5", label: "Years Experience", icon: <Calendar className="h-5 w-5" />, suffix: "+" },
-    { number: "10", label: "Projects Delivered", icon: <Briefcase className="h-5 w-5" />, suffix: "+" },
+    { number: "20", label: "Projects Delivered", icon: <Briefcase className="h-5 w-5" />, suffix: "+" },
     { number: "6", label: "Enterprise Systems", icon: <Layers className="h-5 w-5" />, suffix: "+" },
     { number: "∞", label: "Learning & Growing", icon: <TrendingUp className="h-5 w-5" />, suffix: "" },
   ];
 
 const features = [
-  "Production-ready frontend with real APIs",
-  "Clean, maintainable ASP.NET Core & SQL",
-  "Enterprise systems: public safety & commerce",
-  "Scalable service integrations",
-  "Clear communication & smart trade-offs",
-  "AI assistant (browser-based, no API)",
+  "High-performance React apps for real-world use",
+  "Reliable Node.js backend with clean API structure",
+  "Full-stack solutions from frontend to deployment",
+  "Smooth UX with fast and responsive design",
+  "Scalable integrations tailored to business needs",
+  "Clear communication and on-time delivery",
 ];
 
   const socialLinks = [

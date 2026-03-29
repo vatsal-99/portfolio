@@ -9,7 +9,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "Enterprise",
 //     description:
 //       "Enterprise software used in public safety—incident and records workflows, dispatch-facing features, and integrations with other agency systems.",
-//     image: "/projects/project1.jpg",
+//  fullDescription:   
+//    image: "/projects/project1.jpg",
 //     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -28,7 +29,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "Enterprise",
 //     description:
 //       "Modern RMS platform for managing offender records, arrests, charges, bookings, and case history—built with real-time architecture and integrated with CAD systems.",
-//     image: "/projects/project6.png",
+//  fullDescription:   
+//  image: "/projects/project6.png",
 //     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -48,7 +50,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "Enterprise",
 //     description:
 //       "Desktop-based offender management system for handling bookings, custody tracking, and record maintenance with robust backend services and offline capabilities.",
-//     image: "/projects/project7.png",
+//  fullDescription:   
+//    image: "/projects/project7.png",
 //     tags: ["C#", ".NET", "WPF", "Service Worker", "SQL Server"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -68,7 +71,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "E‑Commerce",
 //     description:
 //       "NopCommerce-based document marketplace: subscriptions, digital delivery, and integrations with CRM and payment providers.",
-//     image: "/projects/project2.png",
+//  fullDescription:   
+//    image: "/projects/project2.png",
 //     tags: ["ASP.NET", "REST APIs", "Payments", "E-sign APIs"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -87,7 +91,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "Enterprise",
 //     description:
 //       "HR performance platform: goals, reviews, 360° feedback, and reporting for people leaders.",
-//     image: "/projects/project3.png",
+//  fullDescription:   
+//    image: "/projects/project3.png",
 //     tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -105,7 +110,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "Enterprise",
 //     description:
 //       "Timesheets, approvals, and utilization reporting for project-based teams—replacing spreadsheet-heavy processes.",
-//     image: "/projects/project4.png",
+//  fullDescription:   
+//    image: "/projects/project4.png",
 //     tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -123,7 +129,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //     category: "Personal",
 //     description:
 //       "Side project: automated replies and real-time messaging flows on WhatsApp so inbound messages get handled without manual back-and-forth.",
-//     image: "/projects/project5.png",
+//  fullDescription:   
+//    image: "/projects/project5.png",
 //     tags: ["Python", "Automation", "APIs"],
 //     demoUrl: "#",
 //     githubUrl: "#",
@@ -146,6 +153,14 @@ const projects = [
     category: "Enterprise",
     description:
       "CAD system for managing calls, events, unit dispatch, and real-time incident tracking across agencies.",
+    fullDescription: `
+      A real-time Computer-Aided Dispatch (CAD) system designed for public safety agencies to manage emergency calls, incidents, and field unit operations efficiently.
+
+      The platform enables call intake, event creation, and intelligent unit dispatch with live status updates. It integrates seamlessly with RMS to ensure accurate record creation and data flow across systems.
+
+      Built with a focus on performance and reliability, the system supports multiple agencies, real-time communication via sockets, and secure role-based access with full audit tracking.
+
+      Key capabilities include live incident tracking, unit status management, cross-agency coordination, and high-availability architecture for mission-critical environments.`,
     image: "/projects/project1.jpg",
     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
     demoUrl: "#",
@@ -166,6 +181,14 @@ const projects = [
     category: "Enterprise",
     description:
       "RMS for managing incidents, citations, warrants, and NIBRS reporting with real-time updates and CAD integration.",
+    fullDescription: `
+      A comprehensive Records Management System (RMS) built for law enforcement agencies to manage incidents, citations, warrants, and compliance reporting in a centralized platform.
+
+      The system handles complete record lifecycles, from incident creation to validation and reporting, with seamless integration from CAD for automatic data flow. It ensures data accuracy and consistency across departments through real-time updates and structured workflows.
+
+      A key focus of the platform is NIBRS reporting, providing validated data entry, advanced search capabilities, and compliance-ready reporting for federal standards.
+
+      Designed for scalability and reliability, the system supports multi-user environments, role-based access control, audit tracking, and efficient data management for high-volume operations.`,  
     image: "/projects/project2.png",
     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
     demoUrl: "#",
@@ -186,6 +209,14 @@ const projects = [
     category: "Enterprise",
     description:
       "Desktop OMS for managing booking, subjects, jail operations, and custody tracking with reliable performance and offline support.",
+    fullDescription:`
+      A robust Offender Management System (OMS) developed as a desktop application to handle booking, subject records, jail operations, and custody tracking in a secure and controlled environment.
+
+      The system supports complete inmate lifecycle management, including intake, classification, housing, and status tracking, with real-time updates across modules. It is optimized for high performance and reliability, even in low-connectivity environments, with offline capabilities and background data synchronization.
+
+      Designed for secure institutional use, the platform includes role-based access control, audit logging, and tightly controlled workflows to ensure data integrity and compliance.
+
+      The application is built to support continuous operations in critical environments, providing stable performance, efficient data handling, and seamless integration with other public safety systems.`,
     image: "/projects/project3.png",
     tags: ["C#", ".NET", "WPF", "Service Worker", "SQL Server"],
     demoUrl: "#",
@@ -206,6 +237,14 @@ const projects = [
     category: "E-Commerce",
     description:
       "Document marketplace with subscriptions, digital delivery, and CRM and payment integrations.",
+    fullDescription: `
+      A scalable document e-commerce platform designed for selling and managing digital products with subscription-based access and secure delivery.
+
+      The platform enables users to browse, purchase, and access documents seamlessly, with integrated payment gateways and automated delivery workflows. It supports subscription models, user account management, and secure access control for digital assets.
+
+      The system is tightly integrated with CRM solutions to manage customer data, track transactions, and streamline business operations. It also includes third-party integrations such as payment processing and e-signature services to enhance the overall user experience.
+
+      Built with a focus on performance, security, and scalability, the platform handles high user traffic and ensures reliable transaction processing for real-world commercial use.`,
     image: "/projects/project4.png",
     tags: ["ASP.NET", "REST APIs", "Payments", "PostgreSQL"],
     demoUrl: "#",
@@ -226,6 +265,14 @@ const projects = [
     category: "Enterprise",
     description:
       "HR system for goals, reviews, and 360° feedback with reporting and role-based access.",
+    fullDescription: `
+      A comprehensive Performance Management System designed to streamline employee evaluation, goal tracking, and feedback processes within organizations.
+
+      The platform enables structured goal setting, performance reviews, and 360° feedback cycles, allowing managers and employees to collaborate effectively on performance improvement. It supports configurable review workflows, role-based access control, and secure data handling across departments.
+
+      Advanced reporting and analytics dashboards provide insights into employee performance, team productivity, and organizational trends, helping leadership make data-driven decisions.
+
+      Built for scalability and usability, the system ensures smooth user experience, efficient workflow management, and reliable performance in enterprise environments.`,
     image: "/projects/project5.png",
     tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
     demoUrl: "#",
@@ -246,6 +293,14 @@ const projects = [
     category: "Enterprise",
     description:
       "Timesheet and project tracking system with task logging, approvals, and utilization reporting.",
+    fullDescription: `
+      A centralized Timesheet Management System built to streamline task tracking, time logging, and project utilization across teams.
+
+      The platform allows users to log daily work, track project hours, and submit timesheets for approval through structured workflows. Managers can review, approve, and monitor team activity, ensuring accurate reporting and accountability.
+
+      It provides detailed utilization reports and insights into project performance, helping organizations optimize resource allocation and improve productivity.
+
+      The system replaces manual spreadsheet-based tracking with a reliable, scalable solution, offering API-driven data processing, export capabilities, and seamless integration with existing business systems.`,
     image: "/projects/project6.png",
     tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
     demoUrl: "#",
@@ -266,6 +321,14 @@ const projects = [
     category: "Personal",
     description:
       "Automation system for handling WhatsApp messages with real-time responses, enabling efficient communication without manual intervention.",
+    fullDescription: `
+      An automated WhatsApp messaging system designed to handle incoming messages and respond intelligently in real time without manual intervention.
+
+      The system uses rule-based logic and configurable triggers to automate replies, enabling efficient communication for repetitive queries and workflows. It processes incoming messages, evaluates conditions, and sends appropriate responses instantly.
+
+      Built for experimentation and automation learning, the project demonstrates integration with messaging APIs, event-driven processing, and real-time handling of user interactions.
+
+      It showcases practical use of automation to reduce manual effort, improve response time, and create scalable communication workflows.`,
     image: "/projects/project7.png",
     tags: ["Python", "Automation", "APIs"],
     demoUrl: "#",
@@ -286,10 +349,18 @@ const projects = [
     category: "Personal",
     description:
       "Data analysis project exploring financial datasets using Python for insights, visualization, and trend analysis.",
+    fullDescription: `
+      A financial data analysis project focused on extracting insights from market datasets using Python-based data processing and visualization techniques.
+
+      The project involves data cleaning, transformation, and analysis using libraries like Pandas and NumPy to identify trends, patterns, and correlations within financial data. Visualizations are created using Matplotlib to represent performance metrics and market behavior effectively.
+
+      It explores key financial indicators, compares datasets, and highlights meaningful insights that can support data-driven decision making.
+
+      This project demonstrates strong analytical thinking, data handling capabilities, and the ability to convert raw data into actionable insights through structured analysis.`,
     image: "/projects/project8.png",
     tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/vatsal-99",
     featured: false,
     accentColor: "from-green-500 to-emerald-600",
     status: "Capstone",
@@ -306,8 +377,16 @@ const projects = [
     category: "Personal",
     description:
       "Web-based calculator platform for civil engineering formulas and calculations for students and professionals.",
+    fullDescription:`
+        A web-based platform providing a collection of civil engineering calculators designed to simplify complex formula-based calculations for students and professionals.
+
+        The application includes multiple tools covering common engineering calculations, allowing users to input values and instantly get accurate results through a clean and user-friendly interface.
+
+        It focuses on usability and accessibility, enabling quick computations without the need for manual calculations or external references. Charts and visual outputs are used where applicable to improve understanding of results.
+
+        This project demonstrates practical problem-solving, front-end development skills, and the ability to build tools that deliver real value to a specific domain audience.`,
     image: "/projects/project9.png",
-    tags: ["ASP","C#","HTML", "CSS", "JS","ChartJs"],
+    tags: ["ASP", "C#", "HTML", "CSS", "JS", "ChartJs"],
     demoUrl: "https://www.civil-engineering-calculators.com/",
     githubUrl: "#",
     featured: false,
@@ -339,7 +418,7 @@ export const ProjectsSection = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const videoRef = useRef(null);
   const sectionRef = useRef(null);
-  
+  const [selectedProject, setSelectedProject] = useState(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"]
@@ -603,43 +682,48 @@ export const ProjectsSection = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 pt-4 border-t border-border">
-                      <motion.a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
-                          project.demoUrl === "#"
-                            ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
-                            : "bg-primary text-primary-foreground hover:bg-primary/90"
-                        }`}
-                        onClick={(e) =>
-                          project.demoUrl === "#" && e.preventDefault()
-                        }
-                      >
-                        <Eye size={16} />
-                        {project.demoUrl === "#" ? "Coming Soon" : "Live Demo"}
-                      </motion.a>
+                      {/* CASE 1: Demo exists */}
+                      {project.demoUrl && project.demoUrl !== "#" && (
+                        <motion.a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90"
+                        >
+                          <Eye size={16} />
+                          View Demo
+                        </motion.a>
+                      )}
 
-                      <motion.a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium border transition-all duration-300 ${
-                          project.githubUrl === "#"
-                            ? "bg-muted text-muted-foreground cursor-not-allowed border-border"
-                            : "bg-background text-foreground border-border hover:border-primary hover:bg-primary/5"
-                        }`}
-                        onClick={(e) =>
-                          project.githubUrl === "#" && e.preventDefault()
-                        }
-                      >
-                        <Github size={16} />
-                        Code
-                      </motion.a>
+                      {/* CASE 3: No demo + no github */}
+                      {(!project.demoUrl || project.demoUrl === "#") && (
+                        <motion.button
+                          onClick={() => setSelectedProject(project)}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="flex-3 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-bg-muted text-foreground text-muted-foreground hover:bg-primary/90  border border-border"
+                        >
+                          <Eye size={16} />
+                          View Details
+                        </motion.button>
+                      )}
+
+                      {/* CASE 2: GitHub exists */}
+                      {project.githubUrl && project.githubUrl !== "#" && (
+                        <motion.a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium border border-border bg-background text-foreground hover:border-primary hover:bg-primary/5"
+                        >
+                          <Github size={16} />
+                          Code
+                        </motion.a>
+                      )}
                     </div>
                   </div>
 
@@ -652,6 +736,90 @@ export const ProjectsSection = () => {
             ))}
           </AnimatePresence>
         </div>
+
+        <AnimatePresence>
+          {selectedProject && (
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProject(null)}
+            >
+              <motion.div
+                className="bg-background border border-border rounded-2xl max-w-2xl w-full overflow-hidden shadow-xl"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Image */}
+                <div className="h-60 w-full overflow-hidden">
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 space-y-5">
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-foreground">
+                    {selectedProject.title}
+                  </h3>
+
+                  {/* Short Description */}
+                  <p className="text-muted-foreground text-sm">
+                    {selectedProject.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="text-sm font-semibold mb-2 text-foreground">
+                      Technologies
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs border border-primary/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Full Description */}
+                  <div>
+                    <h4 className="text-sm font-semibold mb-2 text-foreground">
+                      Overview
+                    </h4>
+
+                    <div className="text-muted-foreground text-sm space-y-3 text-left">
+                      {selectedProject.fullDescription
+                        ?.trim()
+                        .split("\n\n")
+                        .map((para, i) => (
+                          <p key={i}>- {para.trim()}</p>
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Close */}
+                  <button
+                    onClick={() => setSelectedProject(null)}
+                    className="w-25 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    Close
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Load More */}
         {filteredProjects.length > 3 && (
