@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import htmlIcon from "@/assets/icons/html.png";
 import cssIcon from "@/assets/icons/css.png";
 import jsIcon from "@/assets/icons/javascript.png";
-import reactIcon from "@/assets/icons/react.png";
+import reactIcon from "@/assets/icons/react.svg";
 import nodejsIcon from "@/assets/icons/nodejs.png";
 import expressIcon from "@/assets/icons/express.png";
 import postgresqlIcon from "@/assets/icons/postgresql.png";
