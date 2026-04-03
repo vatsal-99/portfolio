@@ -315,90 +315,90 @@ const projects = [
       "Replaced manual spreadsheet tracking",
     ],
   },
-  {
-    id: 7,
-    title: "WhatsApp Auto-Reply System",
-    category: "Personal",
-    description:
-      "Automation system for handling WhatsApp messages with real-time responses, enabling efficient communication without manual intervention.",
-    fullDescription: `
-      An automated WhatsApp messaging system designed to handle incoming messages and respond intelligently in real time without manual intervention.
+  // {
+  //   id: 7,
+  //   title: "WhatsApp Auto-Reply System",
+  //   category: "Personal",
+  //   description:
+  //     "Automation system for handling WhatsApp messages with real-time responses, enabling efficient communication without manual intervention.",
+  //   fullDescription: `
+  //     An automated WhatsApp messaging system designed to handle incoming messages and respond intelligently in real time without manual intervention.
 
-      The system uses rule-based logic and configurable triggers to automate replies, enabling efficient communication for repetitive queries and workflows. It processes incoming messages, evaluates conditions, and sends appropriate responses instantly.
+  //     The system uses rule-based logic and configurable triggers to automate replies, enabling efficient communication for repetitive queries and workflows. It processes incoming messages, evaluates conditions, and sends appropriate responses instantly.
 
-      Built for experimentation and automation learning, the project demonstrates integration with messaging APIs, event-driven processing, and real-time handling of user interactions.
+  //     Built for experimentation and automation learning, the project demonstrates integration with messaging APIs, event-driven processing, and real-time handling of user interactions.
 
-      It showcases practical use of automation to reduce manual effort, improve response time, and create scalable communication workflows.`,
-    image: "/projects/project7.png",
-    tags: ["Python", "Automation", "APIs"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false,
-    accentColor: "from-slate-500 to-zinc-600",
-    status: "Side project",
-    highlights: [
-      "Automated reply workflows for messages",
-      "Real-time message handling",
-      "Configurable rules and triggers",
-      "Built for automation and integration practice",
-    ],
-  },
-  {
-    id: 8,
-    title: "Finance Data Analysis",
-    category: "Personal",
-    description:
-      "Data analysis project exploring financial datasets using Python for insights, visualization, and trend analysis.",
-    fullDescription: `
-      A financial data analysis project focused on extracting insights from market datasets using Python-based data processing and visualization techniques.
+  //     It showcases practical use of automation to reduce manual effort, improve response time, and create scalable communication workflows.`,
+  //   image: "/projects/project7.png",
+  //   tags: ["Python", "Automation", "APIs"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  //   featured: false,
+  //   accentColor: "from-slate-500 to-zinc-600",
+  //   status: "Side project",
+  //   highlights: [
+  //     "Automated reply workflows for messages",
+  //     "Real-time message handling",
+  //     "Configurable rules and triggers",
+  //     "Built for automation and integration practice",
+  //   ],
+  // },
+  // {
+  //   id: 8,
+  //   title: "Finance Data Analysis",
+  //   category: "Personal",
+  //   description:
+  //     "Data analysis project exploring financial datasets using Python for insights, visualization, and trend analysis.",
+  //   fullDescription: `
+  //     A financial data analysis project focused on extracting insights from market datasets using Python-based data processing and visualization techniques.
 
-      The project involves data cleaning, transformation, and analysis using libraries like Pandas and NumPy to identify trends, patterns, and correlations within financial data. Visualizations are created using Matplotlib to represent performance metrics and market behavior effectively.
+  //     The project involves data cleaning, transformation, and analysis using libraries like Pandas and NumPy to identify trends, patterns, and correlations within financial data. Visualizations are created using Matplotlib to represent performance metrics and market behavior effectively.
 
-      It explores key financial indicators, compares datasets, and highlights meaningful insights that can support data-driven decision making.
+  //     It explores key financial indicators, compares datasets, and highlights meaningful insights that can support data-driven decision making.
 
-      This project demonstrates strong analytical thinking, data handling capabilities, and the ability to convert raw data into actionable insights through structured analysis.`,
-    image: "/projects/project8.png",
-    tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/vatsal-99",
-    featured: false,
-    accentColor: "from-green-500 to-emerald-600",
-    status: "Capstone",
-    highlights: [
-      "Analyzed financial datasets for trends and patterns",
-      "Data cleaning and transformation using Pandas",
-      "Visualized insights with charts and graphs",
-      "Explored correlations and performance metrics",
-    ],
-  },
-  {
-    id: 9,
-    title: "Civil Engineering Calculators",
-    category: "Personal",
-    description:
-      "Web-based calculator platform for civil engineering formulas and calculations for students and professionals.",
-    fullDescription:`
-        A web-based platform providing a collection of civil engineering calculators designed to simplify complex formula-based calculations for students and professionals.
+  //     This project demonstrates strong analytical thinking, data handling capabilities, and the ability to convert raw data into actionable insights through structured analysis.`,
+  //   image: "/projects/project8.png",
+  //   tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
+  //   demoUrl: "#",
+  //   githubUrl: "https://github.com/vatsal-99",
+  //   featured: false,
+  //   accentColor: "from-green-500 to-emerald-600",
+  //   status: "Capstone",
+  //   highlights: [
+  //     "Analyzed financial datasets for trends and patterns",
+  //     "Data cleaning and transformation using Pandas",
+  //     "Visualized insights with charts and graphs",
+  //     "Explored correlations and performance metrics",
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   title: "Civil Engineering Calculators",
+  //   category: "Personal",
+  //   description:
+  //     "Web-based calculator platform for civil engineering formulas and calculations for students and professionals.",
+  //   fullDescription:`
+  //       A web-based platform providing a collection of civil engineering calculators designed to simplify complex formula-based calculations for students and professionals.
 
-        The application includes multiple tools covering common engineering calculations, allowing users to input values and instantly get accurate results through a clean and user-friendly interface.
+  //       The application includes multiple tools covering common engineering calculations, allowing users to input values and instantly get accurate results through a clean and user-friendly interface.
 
-        It focuses on usability and accessibility, enabling quick computations without the need for manual calculations or external references. Charts and visual outputs are used where applicable to improve understanding of results.
+  //       It focuses on usability and accessibility, enabling quick computations without the need for manual calculations or external references. Charts and visual outputs are used where applicable to improve understanding of results.
 
-        This project demonstrates practical problem-solving, front-end development skills, and the ability to build tools that deliver real value to a specific domain audience.`,
-    image: "/projects/project9.png",
-    tags: ["ASP", "C#", "HTML", "CSS", "JS", "ChartJs"],
-    demoUrl: "https://www.civil-engineering-calculators.com/",
-    githubUrl: "#",
-    featured: false,
-    accentColor: "from-blue-500 to-cyan-500",
-    status: "College project",
-    highlights: [
-      "Built multiple civil engineering calculation tools",
-      "Simple and user-friendly web interface",
-      "Covers common formulas for quick calculations",
-      "Designed for students and professionals",
-    ],
-  },
+  //       This project demonstrates practical problem-solving, front-end development skills, and the ability to build tools that deliver real value to a specific domain audience.`,
+  //   image: "/projects/project9.png",
+  //   tags: ["ASP", "C#", "HTML", "CSS", "JS", "ChartJs"],
+  //   demoUrl: "https://www.civil-engineering-calculators.com/",
+  //   githubUrl: "#",
+  //   featured: false,
+  //   accentColor: "from-blue-500 to-cyan-500",
+  //   status: "College project",
+  //   highlights: [
+  //     "Built multiple civil engineering calculation tools",
+  //     "Simple and user-friendly web interface",
+  //     "Covers common formulas for quick calculations",
+  //     "Designed for students and professionals",
+  //   ],
+  // },
 ];
 
 const categoryColors = {
@@ -703,7 +703,7 @@ export const ProjectsSection = () => {
                           onClick={() => setSelectedProject(project)}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
-                          className="flex-3 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-bg-muted text-foreground text-muted-foreground hover:bg-primary/90  border border-border"
+                          className="flex-3 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium bg-bg-muted text-foreground text-muted-foreground border border-border"
                         >
                           <Eye size={16} />
                           View Details
@@ -747,7 +747,7 @@ export const ProjectsSection = () => {
               onClick={() => setSelectedProject(null)}
             >
               <motion.div
-                className="bg-background border border-border rounded-2xl max-w-2xl w-full overflow-hidden shadow-xl"
+                className="bg-background border border-border rounded-2xl max-w-2xl w-full overflow-hidden max-h-[90vh] overflow-y-auto  shadow-xl"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}

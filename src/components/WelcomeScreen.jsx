@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const bootLines = [
-  "Booting Vatsal.dev…",
+  "Initializing Vatsal.dev…",
   "Frontend → React · JavaScript",
-  "Backend → ASP.NET Core · APIs · SQL",
-  "AI → Chatbot · Python",
-  "All systems ready 🚀",
+  "Backend → ASP.NET Core · REST APIs · SQL",
+  "Systems → Real-time · Microservices",
+  "Ready to deploy 🚀",
 ];
 
 const WelcomeScreen = ({ onWelcomeComplete }) => {
