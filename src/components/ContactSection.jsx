@@ -5,7 +5,8 @@ import {
   Phone,
   Send,
   Github,
-  Loader2
+  Loader2,
+  Download,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -110,10 +111,20 @@ export const ContactSection = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Get in touch
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Recruiter or hiring manager? Email is the fastest way to reach me 
-            I usually reply within a business day.
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+            Recruiter or hiring manager? I'm currently open to remote .NET and
+            React roles worldwide. I usually reply within a business day.
           </p>
+          <a
+            href="/Vatsal_Chandrani_Resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+          >
+            <Download className="h-4 w-4" />
+            Download Resume
+          </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">

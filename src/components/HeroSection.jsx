@@ -22,10 +22,10 @@ const codeSnippets = [
 ];
 
 const achievements = [
-  { number: "5+", label: "Years of Experience", icon: <Shield className="h-3 w-3" /> },
-  { number: "20+", label: "Projects & Integrations", icon: <Briefcase className="h-3 w-3" /> },
-  { number: "10+", label: "Technologies Mastered", icon: <TrendingUp className="h-3 w-3" /> },
-  { number: "4+", label: "AI & Automation Solutions", icon: <Zap className="h-3 w-3" /> },
+  { number: "5+", label: "Years Experience", icon: <Shield className="h-3 w-3" /> },
+  { number: "50+", label: "US Agencies Served", icon: <Briefcase className="h-3 w-3" /> },
+  { number: "4 Yrs", label: "Enterprise .NET", icon: <TrendingUp className="h-3 w-3" /> },
+  { number: "3", label: "AI Projects Built", icon: <Zap className="h-3 w-3" /> },
 ];
 
   useEffect(() => {
@@ -127,7 +127,7 @@ const achievements = [
                 I'm Vatsal Chandrani
               </span>
               <span className="block text-primary mt-2 text-2xl sm:text-3xl md:text-4xl font-semibold">
-                Full Stack Developer
+                .NET & React Developer
               </span>
             </motion.h1>
 
@@ -138,14 +138,12 @@ const achievements = [
                 visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
               }}
             >
-              I build enterprise web apps with{" "}
-              <span className="text-primary">React</span> on the front end and{" "}
-              <span className="text-primary">
-                ASP.NET Core, REST APIs, and SQL Server
-              </span>{" "}
-              behind the scenes. I also use{" "}
-              <span className="text-primary">Python</span> for data science, ML,
-              and AI-style projects.
+              I build enterprise web applications with{" "}
+              <span className="text-primary">ASP.NET Core</span> and{" "}
+              <span className="text-primary">React</span>. 5+ years of production
+              experience including nearly 4 years on a mission-critical platform
+              serving{" "}
+              <span className="text-primary">50+ US law enforcement agencies</span>.
             </motion.p>
 
             <motion.div

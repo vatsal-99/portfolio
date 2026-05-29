@@ -2,410 +2,103 @@ import { ArrowRight, ExternalLink, Github, ChevronUp, Star, Code, ChevronDown, M
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
-// const projects = [
-//   {
-//     id: 1,
-//     title: "Public Safety Software Platform",
-//     category: "Enterprise",
-//     description:
-//       "Enterprise software used in public safety—incident and records workflows, dispatch-facing features, and integrations with other agency systems.",
-//  fullDescription:   
-//    image: "/projects/project1.jpg",
-//     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     featured: true,
-//     accentColor: "from-orange-500 to-amber-500",
-//     status: "Live",
-//     highlights: [
-//       "React modules for incident and records management",
-//       "Real-time updates for dispatch and reporting teams",
-//       "Secure, service-based integrations across systems",
-//     ],
-//   },
-//   {
-//     id: 2,
-//     title: "Records Management System (RMS)",
-//     category: "Enterprise",
-//     description:
-//       "Modern RMS platform for managing offender records, arrests, charges, bookings, and case history—built with real-time architecture and integrated with CAD systems.",
-//  fullDescription:   
-//  image: "/projects/project6.png",
-//     tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     featured: true,
-//     accentColor: "from-red-500 to-orange-500",
-//     status: "Live",
-//     highlights: [
-//       "Complete offender lifecycle: booking → charges → case tracking",
-//       "Real-time updates using Socket.IO across multiple users",
-//       "Integrated with CAD for seamless incident-to-record conversion",
-//       "Advanced search, reporting, and audit logs",
-//     ],
-//   },
-//   {
-//     id: 3,
-//     title: "Offender Management System (OMS)",
-//     category: "Enterprise",
-//     description:
-//       "Desktop-based offender management system for handling bookings, custody tracking, and record maintenance with robust backend services and offline capabilities.",
-//  fullDescription:   
-//    image: "/projects/project7.png",
-//     tags: ["C#", ".NET", "WPF", "Service Worker", "SQL Server"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     featured: true,
-//     accentColor: "from-indigo-500 to-blue-500",
-//     status: "Live",
-//     highlights: [
-//       "WPF-based desktop interface for secure law enforcement usage",
-//       "Service worker for background processing and sync",
-//       "Efficient offender tracking and custody management",
-//       "Reliable performance in low or offline network conditions",
-//     ],
-//   },
-//   {
-//     id: 3,
-//     title: "Document E‑Commerce Platform",
-//     category: "E‑Commerce",
-//     description:
-//       "NopCommerce-based document marketplace: subscriptions, digital delivery, and integrations with CRM and payment providers.",
-//  fullDescription:   
-//    image: "/projects/project2.png",
-//     tags: ["ASP.NET", "REST APIs", "Payments", "E-sign APIs"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     featured: true,
-//     accentColor: "from-orange-500 to-rose-500",
-//     status: "Live",
-//     highlights: [
-//       "Custom extensions for document workflows",
-//       "Payment gateway and e-signature integrations",
-//       "Dynamics CRM sync for customers and orders",
-// 0    ],
-//   },
-//   {
-//     id: 4,
-//     title: "Performance Management System",
-//     category: "Enterprise",
-//     description:
-//       "HR performance platform: goals, reviews, 360° feedback, and reporting for people leaders.",
-//  fullDescription:   
-//    image: "/projects/project3.png",
-//     tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     accentColor: "from-amber-500 to-emerald-500",
-//     status: "Live",
-//     highlights: [
-//       "Review cycles, goals, and employee dashboards",
-//       "Backend services and SQL reporting for HR metrics",
-//       "Role-based access for managers and staff",
-//     ],
-//   },
-//   {
-//     id: 5,
-//     title: "Timesheet Management System",
-//     category: "Enterprise",
-//     description:
-//       "Timesheets, approvals, and utilization reporting for project-based teams—replacing spreadsheet-heavy processes.",
-//  fullDescription:   
-//    image: "/projects/project4.png",
-//     tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     accentColor: "from-orange-500 to-indigo-500",
-//     status: "Live",
-//     highlights: [
-//       "Task logging and approval workflows",
-//       "Reporting dashboards for time and projects",
-//       "APIs for secure processing and exports",
-//     ],
-//   },
-//   {
-//     id: 6,
-//     title: "WhatsApp auto-reply system",
-//     category: "Personal",
-//     description:
-//       "Side project: automated replies and real-time messaging flows on WhatsApp so inbound messages get handled without manual back-and-forth.",
-//  fullDescription:   
-//    image: "/projects/project5.png",
-//     tags: ["Python", "Automation", "APIs"],
-//     demoUrl: "#",
-//     githubUrl: "#",
-//     featured: false,
-//     accentColor: "from-slate-500 to-zinc-600",
-//     status: "Side project",
-//     highlights: [
-//       "Configurable auto-replies",
-//       "Real-time message handling",
-//       "Built as a practical integration exercise",
-//     ],
-//   },
-// ];
-
-
 const projects = [
   {
     id: 1,
-    title: "Computer-Aided Dispatch (CAD)",
+    title: "Public Safety Software Platform",
     category: "Enterprise",
+    badges: ["Enterprise", "Production", "US Client"],
     description:
-      "CAD system for managing calls, events, unit dispatch, and real-time incident tracking across agencies.",
+      "Mission-critical enterprise platform serving 50+ US law enforcement agencies — NIBRS compliance, real-time dispatch, analytics, and CI/CD.",
     fullDescription: `
-      A real-time Computer-Aided Dispatch (CAD) system designed for public safety agencies to manage emergency calls, incidents, and field unit operations efficiently.
+      A mission-critical enterprise software platform serving 50+ US law enforcement agencies, built with ASP.NET Core, C#, React, TypeScript, and SQL Server.
 
-      The platform enables call intake, event creation, and intelligent unit dispatch with live status updates. It integrates seamlessly with RMS to ensure accurate record creation and data flow across systems.
+      Responsible for system stabilization — resolved long-standing production issues and improved overall reliability. Built and maintained CI/CD pipelines using Azure DevOps, automating build, test, and deployment workflows across multiple environments.
 
-      Built with a focus on performance and reliability, the system supports multiple agencies, real-time communication via sockets, and secure role-based access with full audit tracking.
+      Developed NIBRS compliance features and automated data broker integration for submitting standardized FBI crime reports to federal databases. Integrated SignalR real-time communication enabling live updates in emergency dispatch and reporting systems.
 
-      Key capabilities include live incident tracking, unit status management, cross-agency coordination, and high-availability architecture for mission-critical environments.`,
+      Designed and maintained microservice-based integrations for secure data exchange across public safety systems. Led a team of 4-6 developers — code reviews, technical mentoring, sprint planning, and delivery ownership.`,
     image: "/projects/project1.jpg",
-    tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
+    tags: ["ASP.NET Core", "C#", "React", "TypeScript", "Node.js", "SignalR", "SQL Server", "Azure DevOps"],
     demoUrl: "#",
     githubUrl: "#",
     featured: true,
     accentColor: "from-orange-500 to-amber-500",
     status: "Live",
     highlights: [
-      "Call intake, event creation, and dispatch workflows",
-      "Real-time unit status and incident updates",
-      "CAD to RMS integration for record creation",
-      "Secure role-based access with audit tracking",
+      "Platform for 50+ US law enforcement agencies",
+      "CI/CD pipelines via Azure DevOps",
+      "SignalR real-time emergency dispatch",
+      "Led team of 4-6 developers",
     ],
   },
   {
     id: 2,
-    title: "Records Management System (RMS)",
-    category: "Enterprise",
+    title: "AI-Powered Chatbot & Automation Agent",
+    category: "AI",
+    badges: ["AI", "Automation", "Claude API"],
     description:
-      "RMS for managing incidents, citations, warrants, and NIBRS reporting with real-time updates and CAD integration.",
+      "Conversational AI chatbot with Claude API and automated WhatsApp messaging agent using Groq AI for end-to-end workflow automation.",
     fullDescription: `
-      A comprehensive Records Management System (RMS) built for law enforcement agencies to manage incidents, citations, warrants, and compliance reporting in a centralized platform.
+      Built a conversational AI chatbot using Claude API with custom system prompts and multi-turn context management, ensuring TypeScript type safety throughout.
 
-      The system handles complete record lifecycles, from incident creation to validation and reporting, with seamless integration from CAD for automatic data flow. It ensures data accuracy and consistency across departments through real-time updates and structured workflows.
+      Developed an automated WhatsApp messaging agent using Groq AI — end-to-end workflow automation with AI-driven message generation, configurable triggers, and real-time message handling.
 
-      A key focus of the platform is NIBRS reporting, providing validated data entry, advanced search capabilities, and compliance-ready reporting for federal standards.
+      Evaluated and compared output quality across Claude, GPT, and Groq models, designing rubrics to assess accuracy, tone, and contextual relevance for different use cases.
 
-      Designed for scalability and reliability, the system supports multi-user environments, role-based access control, audit tracking, and efficient data management for high-volume operations.`,  
-    image: "/projects/project2.png",
-    tags: ["React", "Node.js", "Socket.IO", "FeathersJS", "SQL Server"],
+      Demonstrates practical AI integration capability alongside enterprise .NET and React background.`,
+    image: "/projects/project5.png",
+    tags: ["Claude API", "OpenAI API", "Groq AI", "Node.js", "React", "TypeScript"],
     demoUrl: "#",
     githubUrl: "#",
-    featured: true,
-    accentColor: "from-red-500 to-orange-500",
-    status: "Live",
+    featured: false,
+    accentColor: "from-violet-500 to-purple-500",
+    status: "Personal",
     highlights: [
-      "Incident, citation, and warrant record workflows",
-      "Real-time updates across users and departments",
-      "CAD to RMS integration for record creation",
-      "NIBRS reporting with search and data validation",
+      "Claude API with custom system prompts",
+      "Multi-turn context management",
+      "Automated WhatsApp messaging agent (Groq AI)",
+      "Cross-model quality evaluation",
     ],
   },
   {
     id: 3,
-    title: "Offender Management System (OMS)",
-    category: "Enterprise",
-    description:
-      "Desktop OMS for managing booking, subjects, jail operations, and custody tracking with reliable performance and offline support.",
-    fullDescription:`
-      A robust Offender Management System (OMS) developed as a desktop application to handle booking, subject records, jail operations, and custody tracking in a secure and controlled environment.
-
-      The system supports complete inmate lifecycle management, including intake, classification, housing, and status tracking, with real-time updates across modules. It is optimized for high performance and reliability, even in low-connectivity environments, with offline capabilities and background data synchronization.
-
-      Designed for secure institutional use, the platform includes role-based access control, audit logging, and tightly controlled workflows to ensure data integrity and compliance.
-
-      The application is built to support continuous operations in critical environments, providing stable performance, efficient data handling, and seamless integration with other public safety systems.`,
-    image: "/projects/project3.png",
-    tags: ["C#", ".NET", "WPF", "Service Worker", "SQL Server"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: true,
-    accentColor: "from-indigo-500 to-blue-500",
-    status: "Live",
-    highlights: [
-      "Booking, subject, and jail management workflows",
-      "Real-time custody tracking and status updates",
-      "Background services for data sync and processing",
-      "Optimized for secure and offline desktop usage",
-    ],
-  },
-  {
-    id: 4,
     title: "Document E-Commerce Platform",
     category: "E-Commerce",
+    badges: ["Enterprise", "E-Commerce", "CRM"],
     description:
-      "Document marketplace with subscriptions, digital delivery, and CRM and payment integrations.",
+      "Custom enterprise marketplace with digital product sales, subscription management, secure document delivery, and automated CRM synchronization.",
     fullDescription: `
-      A scalable document e-commerce platform designed for selling and managing digital products with subscription-based access and secure delivery.
+      A custom enterprise marketplace built on nopCommerce with C# and ASP.NET Core, designed for digital document sales and subscription-based access.
 
-      The platform enables users to browse, purchase, and access documents seamlessly, with integrated payment gateways and automated delivery workflows. It supports subscription models, user account management, and secure access control for digital assets.
+      Built custom nopCommerce extensions for digital product sales, subscription management, and secure document delivery. Integrated Microsoft Dynamics CRM, payment gateway APIs, and e-signature APIs for automated customer workflows.
 
-      The system is tightly integrated with CRM solutions to manage customer data, track transactions, and streamline business operations. It also includes third-party integrations such as payment processing and e-signature services to enhance the overall user experience.
+      The platform handles user account management, subscription lifecycles, secure access control for digital assets, and automated CRM synchronization — ensuring customer data, transactions, and order history stay in sync across systems.
 
-      Built with a focus on performance, security, and scalability, the platform handles high user traffic and ensures reliable transaction processing for real-world commercial use.`,
+      Built with a focus on performance, security, and scalability for real-world commercial use.`,
     image: "/projects/project4.png",
-    tags: ["ASP.NET", "REST APIs", "Payments", "PostgreSQL"],
+    tags: ["nopCommerce", "C#", "ASP.NET Core", "Payment APIs", "E-signature APIs", "MS Dynamics CRM"],
     demoUrl: "#",
     githubUrl: "#",
-    featured: true,
+    featured: false,
     accentColor: "from-orange-500 to-rose-500",
     status: "Live",
     highlights: [
-      "Document purchase and delivery workflows",
-      "Payment and e-signature integrations",
-      "CRM sync for users and transactions",
-      "Secure and scalable backend services",
+      "Custom nopCommerce extensions",
+      "Subscription & digital document delivery",
+      "Payment gateway & e-signature APIs",
+      "Microsoft Dynamics CRM sync",
     ],
   },
-  {
-    id: 5,
-    title: "Performance Management System",
-    category: "Enterprise",
-    description:
-      "HR system for goals, reviews, and 360° feedback with reporting and role-based access.",
-    fullDescription: `
-      A comprehensive Performance Management System designed to streamline employee evaluation, goal tracking, and feedback processes within organizations.
-
-      The platform enables structured goal setting, performance reviews, and 360° feedback cycles, allowing managers and employees to collaborate effectively on performance improvement. It supports configurable review workflows, role-based access control, and secure data handling across departments.
-
-      Advanced reporting and analytics dashboards provide insights into employee performance, team productivity, and organizational trends, helping leadership make data-driven decisions.
-
-      Built for scalability and usability, the system ensures smooth user experience, efficient workflow management, and reliable performance in enterprise environments.`,
-    image: "/projects/project5.png",
-    tags: ["React", "ASP.NET Core", "SQL", "Reporting"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: true,
-    accentColor: "from-amber-500 to-emerald-500",
-    status: "Live",
-    highlights: [
-      "Goal setting and review cycle workflows",
-      "360° feedback for employees and managers",
-      "Reporting dashboards and analytics",
-      "Role-based access and permissions",
-    ],
-  },
-  {
-    id: 6,
-    title: "Timesheet Management System",
-    category: "Enterprise",
-    description:
-      "Timesheet and project tracking system with task logging, approvals, and utilization reporting.",
-    fullDescription: `
-      A centralized Timesheet Management System built to streamline task tracking, time logging, and project utilization across teams.
-
-      The platform allows users to log daily work, track project hours, and submit timesheets for approval through structured workflows. Managers can review, approve, and monitor team activity, ensuring accurate reporting and accountability.
-
-      It provides detailed utilization reports and insights into project performance, helping organizations optimize resource allocation and improve productivity.
-
-      The system replaces manual spreadsheet-based tracking with a reliable, scalable solution, offering API-driven data processing, export capabilities, and seamless integration with existing business systems.`,
-    image: "/projects/project6.png",
-    tags: [".NET", "jQuery", "REST APIs", "SQL Server"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: true,
-    accentColor: "from-orange-500 to-indigo-500",
-    status: "Live",
-    highlights: [
-      "Task logging and approval workflows",
-      "Project and utilization reporting",
-      "APIs for data processing and exports",
-      "Replaced manual spreadsheet tracking",
-    ],
-  },
-  // {
-  //   id: 7,
-  //   title: "WhatsApp Auto-Reply System",
-  //   category: "Personal",
-  //   description:
-  //     "Automation system for handling WhatsApp messages with real-time responses, enabling efficient communication without manual intervention.",
-  //   fullDescription: `
-  //     An automated WhatsApp messaging system designed to handle incoming messages and respond intelligently in real time without manual intervention.
-
-  //     The system uses rule-based logic and configurable triggers to automate replies, enabling efficient communication for repetitive queries and workflows. It processes incoming messages, evaluates conditions, and sends appropriate responses instantly.
-
-  //     Built for experimentation and automation learning, the project demonstrates integration with messaging APIs, event-driven processing, and real-time handling of user interactions.
-
-  //     It showcases practical use of automation to reduce manual effort, improve response time, and create scalable communication workflows.`,
-  //   image: "/projects/project7.png",
-  //   tags: ["Python", "Automation", "APIs"],
-  //   demoUrl: "#",
-  //   githubUrl: "#",
-  //   featured: false,
-  //   accentColor: "from-slate-500 to-zinc-600",
-  //   status: "Side project",
-  //   highlights: [
-  //     "Automated reply workflows for messages",
-  //     "Real-time message handling",
-  //     "Configurable rules and triggers",
-  //     "Built for automation and integration practice",
-  //   ],
-  // },
-  // {
-  //   id: 8,
-  //   title: "Finance Data Analysis",
-  //   category: "Personal",
-  //   description:
-  //     "Data analysis project exploring financial datasets using Python for insights, visualization, and trend analysis.",
-  //   fullDescription: `
-  //     A financial data analysis project focused on extracting insights from market datasets using Python-based data processing and visualization techniques.
-
-  //     The project involves data cleaning, transformation, and analysis using libraries like Pandas and NumPy to identify trends, patterns, and correlations within financial data. Visualizations are created using Matplotlib to represent performance metrics and market behavior effectively.
-
-  //     It explores key financial indicators, compares datasets, and highlights meaningful insights that can support data-driven decision making.
-
-  //     This project demonstrates strong analytical thinking, data handling capabilities, and the ability to convert raw data into actionable insights through structured analysis.`,
-  //   image: "/projects/project8.png",
-  //   tags: ["Python", "Pandas", "NumPy", "Matplotlib"],
-  //   demoUrl: "#",
-  //   githubUrl: "https://github.com/vatsal-99",
-  //   featured: false,
-  //   accentColor: "from-green-500 to-emerald-600",
-  //   status: "Capstone",
-  //   highlights: [
-  //     "Analyzed financial datasets for trends and patterns",
-  //     "Data cleaning and transformation using Pandas",
-  //     "Visualized insights with charts and graphs",
-  //     "Explored correlations and performance metrics",
-  //   ],
-  // },
-  // {
-  //   id: 9,
-  //   title: "Civil Engineering Calculators",
-  //   category: "Personal",
-  //   description:
-  //     "Web-based calculator platform for civil engineering formulas and calculations for students and professionals.",
-  //   fullDescription:`
-  //       A web-based platform providing a collection of civil engineering calculators designed to simplify complex formula-based calculations for students and professionals.
-
-  //       The application includes multiple tools covering common engineering calculations, allowing users to input values and instantly get accurate results through a clean and user-friendly interface.
-
-  //       It focuses on usability and accessibility, enabling quick computations without the need for manual calculations or external references. Charts and visual outputs are used where applicable to improve understanding of results.
-
-  //       This project demonstrates practical problem-solving, front-end development skills, and the ability to build tools that deliver real value to a specific domain audience.`,
-  //   image: "/projects/project9.png",
-  //   tags: ["ASP", "C#", "HTML", "CSS", "JS", "ChartJs"],
-  //   demoUrl: "https://www.civil-engineering-calculators.com/",
-  //   githubUrl: "#",
-  //   featured: false,
-  //   accentColor: "from-blue-500 to-cyan-500",
-  //   status: "College project",
-  //   highlights: [
-  //     "Built multiple civil engineering calculation tools",
-  //     "Simple and user-friendly web interface",
-  //     "Covers common formulas for quick calculations",
-  //     "Designed for students and professionals",
-  //   ],
-  // },
 ];
 
 const categoryColors = {
   Enterprise:
     "from-orange-500/20 to-amber-500/20 text-orange-600 border-orange-500/30",
-  "E‑Commerce":
+  "E-Commerce":
     "from-indigo-500/20 to-sky-500/20 text-indigo-600 border-indigo-500/30",
+  AI:
+    "from-violet-500/20 to-purple-500/20 text-violet-600 border-violet-500/30",
   Personal:
     "from-slate-500/20 to-zinc-500/20 text-slate-700 dark:text-slate-300 border-slate-500/30",
 };
@@ -513,9 +206,9 @@ export const ProjectsSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Production work from public safety and HR platforms to
-            commerce—React on the UI, ASP.NET and SQL behind it, plus a personal
-            WhatsApp automation build.
+            Enterprise-grade platforms serving real-world clients — ASP.NET Core
+            and React at the core, plus hands-on AI integration experience with
+            Claude API and OpenAI API.
           </motion.p>
         </motion.div>
 
@@ -679,6 +372,20 @@ export const ProjectsSection = () => {
                         </motion.span>
                       ))}
                     </div>
+
+                    {/* Badges */}
+                    {project.badges && (
+                      <div className="flex flex-wrap gap-1.5 mb-4">
+                        {project.badges.map((badge, badgeIndex) => (
+                          <span
+                            key={badgeIndex}
+                            className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-foreground/8 text-muted-foreground border border-border tracking-wide uppercase"
+                          >
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
+                    )}
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 pt-4 border-t border-border">
@@ -878,8 +585,8 @@ export const ProjectsSection = () => {
               Like what you see?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Open to roles where React meets solid APIs and databases full
-              stack, product-minded, and delivery-focused.
+              Open to remote .NET and React roles worldwide — enterprise-minded,
+              production-focused, and available now.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">

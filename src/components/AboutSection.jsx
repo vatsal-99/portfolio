@@ -15,12 +15,12 @@ export const AboutSection = () => {
   ];
 
 const features = [
-  "High-performance React apps for real-world use",
-  "Reliable Node.js backend with clean API structure",
-  "Full-stack solutions from frontend to deployment",
-  "Smooth UX with fast and responsive design",
-  "Scalable integrations tailored to business needs",
-  "Clear communication and on-time delivery",
+  "ASP.NET Core + C# enterprise backend systems",
+  "React + TypeScript frontend applications",
+  "CI/CD pipelines via Azure DevOps",
+  "Real-time systems with SignalR",
+  "Team leadership and code reviews (4-6 devs)",
+  "AI integrations with Claude & OpenAI APIs",
 ];
 
   const socialLinks = [
@@ -32,49 +32,46 @@ const features = [
 const tabContent = {
   personal: (
     <>
-      I’m based in India. Outside of work, I enjoy understanding how systems fit
-      together especially balancing{" "}
-      <span className="text-primary">fast, responsive UI</span> with{" "}
-      <span className="text-primary">reliable backend logic</span>. I like
-      exploring new tools, improving performance, and building things that solve
-      real problems. The chat assistant on this page answers common questions
-      about my work and projects in simple terms everything runs{" "}
-      <span className="text-primary">locally in the browser</span>. I also enjoy
-      continuously refining my workflow and building{" "}
-      <span className="text-primary">efficient, scalable applications</span>.
+      I’m based in India and{" "}
+      <span className="text-primary">open to remote roles worldwide</span> in
+      .NET, React, or Full Stack development. Outside of work, I enjoy
+      understanding how complex systems fit together — balancing enterprise
+      backend reliability with fast, responsive UIs. I continuously explore new
+      tools and AI integrations, and built the chat assistant on this page
+      using AI APIs.
     </>
   ),
 
   professional: (
     <>
-      I’m a Full Stack Developer with{" "}
-      <span className="text-primary">5+ years</span> of experience building
-      production-grade applications. Currently, I work on{" "}
-      <span className="text-primary">enterprise public safety systems</span>{" "}
-      using <span className="text-primary">React and REST APIs</span>, focusing
-      on performance, scalability, and reliability. Previously, I developed
-      performance management and timesheet platforms, and built a{" "}
-      <span className="text-primary">WhatsApp auto-reply system</span> for
-      real-time messaging and automation. I work with{" "}
-      <span className="text-primary">.NET, SQL, and React</span> daily, and use{" "}
-      <span className="text-primary">Python for data science and ML</span>,
-      exploring AI-driven applications end-to-end.
+      Senior Full Stack Developer with{" "}
+      <span className="text-primary">5+ years</span> of enterprise experience
+      across the complete stack. Spent nearly 4 years on a{" "}
+      <span className="text-primary">
+        mission-critical platform serving 50+ US law enforcement agencies
+      </span>{" "}
+      — handling backend architecture, CI/CD pipelines via Azure DevOps, React
+      UI development, and real-time systems using SignalR. I take ownership of
+      complex codebases, lead small teams, and deliver in high-stakes
+      production environments. Also building AI-powered applications with{" "}
+      <span className="text-primary">Claude API and OpenAI API</span>.{" "}
+      <span className="text-primary">
+        Currently open to remote roles worldwide.
+      </span>
     </>
   ),
 
   approach: (
     <>
-      I start with <span className="text-primary">user needs</span> and
-      translate them into clean, maintainable solutions. I build{" "}
-      <span className="text-primary">clear React interfaces</span> backed by{" "}
-      <span className="text-primary">robust APIs and structured SQL</span>. I
-      prefer <span className="text-primary">small, testable iterations</span>{" "}
-      over large rewrites, ensuring stability and scalability. I collaborate
-      with architecture teams on integrations and focus on delivering{" "}
-      <span className="text-primary">
-        efficient, maintainable, real-world solutions
-      </span>{" "}
-      with strong attention to performance and code quality.
+      I start with{" "}
+      <span className="text-primary">user needs and business requirements</span>{" "}
+      and translate them into clean, maintainable solutions. I build{" "}
+      <span className="text-primary">robust ASP.NET Core APIs</span> backed by
+      SQL Server and pair them with{" "}
+      <span className="text-primary">well-structured React interfaces</span>. I
+      prefer small, testable iterations over large rewrites, and I have
+      experience leading teams of 4-6 developers — code reviews, sprint
+      planning, and delivery ownership.
     </>
   ),
 };
@@ -138,14 +135,13 @@ const tabContent = {
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6">
             <span className="text-foreground">About me</span>
             <span className="block text-primary font-normal text-2xl sm:text-3xl md:text-4xl mt-2 sm:mt-3">
-              Enterprise work, practical delivery
+              Enterprise .NET & React, open to remote worldwide
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            5+ years building scalable web applications in public safety and
-            e-commerce delivering high-performance UI, robust APIs, and
-            accurate, real-world data, powered by modern technologies and
-            AI-driven solutions.
+            Senior Full Stack Developer with 5+ years of enterprise experience — ASP.NET Core backend,
+            React frontend, and nearly 4 years on a mission-critical platform serving
+            50+ US law enforcement agencies.
           </p>
         </div>
 
@@ -182,7 +178,7 @@ const tabContent = {
                       Vatsal Chandrani
                     </h2>
                     <p className="text-primary text-base sm:text-lg font-normal mb-3 sm:mb-4">
-                      Full Stack Developer
+                      .NET & React Developer
                     </p>
                     <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                       {achievements.map((achievement, index) => (

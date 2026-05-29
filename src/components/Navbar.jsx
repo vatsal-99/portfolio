@@ -9,6 +9,7 @@ import {
   Moon,
   Github,
   Linkedin,
+  History,
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -18,9 +19,8 @@ const navItems = [
   { name: "About", href: "#about", icon: User },
   { name: "Skills", href: "#skills", icon: Code },
   { name: "Projects", href: "#projects", icon: Briefcase },
-  // { name: "Testimonials", href: "#testimonials", icon: MessageSquare },
+  { name: "Experience", href: "#experience", icon: History },
   { name: "Contact", href: "#contact", icon: Mail },
-  // { name: "Blog", href: "https://blogni.vercel.app", icon: BookOpen },
 ];
 
 const iconBtn =
@@ -158,9 +158,15 @@ export const Navbar = () => {
                 <span className="text-sm font-semibold text-foreground">
                   Vatsal Chandrani
                 </span>
-                <span className="text-[11px] text-muted-foreground hidden lg:block">
-                  Portfolio
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[11px] text-muted-foreground hidden lg:block">
+                    Portfolio
+                  </span>
+                  <span className="hidden lg:flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/15 text-green-600 dark:text-green-400 text-[10px] font-semibold border border-green-500/30 leading-none">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />
+                    Open to Work
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -263,9 +269,15 @@ export const Navbar = () => {
                       <span className="text-sm font-semibold text-foreground">
                         Vatsal Chandrani
                       </span>
-                      <span className="text-xs text-muted-foreground">
-                        Full Stack Developer
-                      </span>
+                      <div className="flex items-center gap-1.5 mt-0.5">
+                        <span className="text-xs text-muted-foreground">
+                          .NET & React Developer
+                        </span>
+                        <span className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-green-500/15 text-green-600 dark:text-green-400 text-[9px] font-semibold border border-green-500/30 leading-none">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse inline-block" />
+                          Open to Work
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
