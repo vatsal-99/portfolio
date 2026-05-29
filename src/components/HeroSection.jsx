@@ -132,7 +132,7 @@ const achievements = [
             </motion.h1>
 
             <motion.p
-              className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl"
+              className="text-xl sm:text-2xl text-foreground/75 mt-6 leading-relaxed max-w-2xl"
               variants={{
                 hidden: { y: 30, opacity: 0 },
                 visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
