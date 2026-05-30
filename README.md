@@ -177,7 +177,7 @@ If you find it useful, a ⭐ on the repo is appreciated!
 - 🌐 [vatsalchandrani.me](https://vatsalchandrani.me)
 - 💼 [LinkedIn](https://linkedin.com/in/vatsal-chandrani)
 - 🐙 [GitHub](https://github.com/vatsal-99)
-- 📧 vatsal1214@gmail.com
+- 📧 vatsalchandrani99@gmail.com
 
 ---
 
