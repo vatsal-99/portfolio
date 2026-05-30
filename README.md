@@ -6,10 +6,11 @@
 
 **Senior .NET & React Developer · Open to Remote Worldwide**
 
-[![Stars](https://img.shields.io/github/stars/vatsal-99/portfolio?style=flat-square&color=yellow)](https://github.com/vatsal-99/portfolio/stargazers)
-[![Forks](https://img.shields.io/github/forks/vatsal-99/portfolio?style=flat-square&color=blue)](https://github.com/vatsal-99/portfolio/network/members)
-[![Issues](https://img.shields.io/github/issues/vatsal-99/portfolio?style=flat-square&color=red)](https://github.com/vatsal-99/portfolio/issues)
-[![License](https://img.shields.io/github/license/vatsal-99/portfolio?style=flat-square&color=green)](LICENSE)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vatsalchandrani.me)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 🌐 **[Live Demo → vatsalchandrani.me](https://vatsalchandrani.me)**
 
