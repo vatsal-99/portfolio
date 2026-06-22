@@ -9,23 +9,22 @@ export const HeroSection = () => {
   const [displayedCode, setDisplayedCode] = useState("");
 
 const codeSnippets = [
-  "// Welcome to my site   glad you're here.",
+  "// Welcome to my site · glad you're here.",
   "",
-  "> const message = 'Explore my AI chatbot, projects & skills';",
-  "> console.log(message);",
+  "> const focus = 'Building enterprise software with .NET & React';",
+  "> console.log(focus);",
   "",
-  "// Optimized for performance & scalability",
-  "// Crafted with React & .NET",
-  "// Writing clean, maintainable & scalable code",
-  "// Thanks for visiting ·   Vatsal",
-  "// Try the chatbot → Ask anything 👇",
+  "// 5+ years of production experience",
+  "// ASP.NET Core · React · TypeScript · Azure DevOps",
+  "// Clean architecture · scalable systems · CI/CD",
+  "// Thanks for visiting · Vatsal",
 ];
 
 const achievements = [
   { number: "5+", label: "Years Experience", icon: <Shield className="h-3 w-3" /> },
-  { number: "50+", label: "US Agencies Served", icon: <Briefcase className="h-3 w-3" /> },
-  { number: "4 Yrs", label: "Enterprise .NET", icon: <TrendingUp className="h-3 w-3" /> },
-  { number: "3", label: "AI Projects Built", icon: <Zap className="h-3 w-3" /> },
+  { number: "10+", label: "Enterprise Projects", icon: <Briefcase className="h-3 w-3" /> },
+  { number: "4+", label: ".NET Experience", icon: <TrendingUp className="h-3 w-3" /> },
+  { number: "3+", label: "AI Integrations", icon: <Zap className="h-3 w-3" /> },
 ];
 
   useEffect(() => {
@@ -127,24 +126,27 @@ const achievements = [
                 I'm Vatsal Chandrani
               </span>
               <span className="block text-primary mt-2 text-2xl sm:text-3xl md:text-4xl font-semibold">
-                .NET & React Developer
+                Senior Full Stack Developer
               </span>
             </motion.h1>
 
-            <motion.p
-              className="text-xl sm:text-2xl text-foreground/75 mt-6 leading-relaxed max-w-2xl"
-              variants={{
-                hidden: { y: 30, opacity: 0 },
-                visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
-              }}
-            >
-              I build enterprise web applications with{" "}
-              <span className="text-primary">ASP.NET Core</span> and{" "}
-              <span className="text-primary">React</span>. 5+ years of production
-              experience including nearly 4 years on a mission-critical platform
-              serving{" "}
-              <span className="text-primary">50+ US law enforcement agencies</span>.
-            </motion.p>
+           <motion.p
+            className="text-xl sm:text-2xl text-foreground/75 mt-6 leading-relaxed max-w-2xl"
+            variants={{
+              hidden: { y: 30, opacity: 0 },
+              visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
+            }}
+          >
+            Senior Full Stack Developer with 5+ years of experience building{" "}
+            <span className="text-primary">enterprise software</span> using{" "}
+            <span className="text-primary">ASP.NET Core</span>,{" "}
+            <span className="text-primary">C#</span>,{" "}
+            <span className="text-primary">React</span>,{" "}
+            <span className="text-primary">TypeScript</span>, and{" "}
+            <span className="text-primary">Azure DevOps</span>. Experienced in scalable
+            architectures, real-time systems, enterprise integrations, and modern web
+            application development.
+          </motion.p>
 
             <motion.div
               className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8"

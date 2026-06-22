@@ -3,94 +3,144 @@ import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const projects = [
-  {
-    id: 1,
-    title: "Public Safety Software Platform",
-    category: "Enterprise",
-    badges: ["Enterprise", "Production", "US Client"],
-    description:
-      "Mission-critical enterprise platform serving 50+ US law enforcement agencies — NIBRS compliance, real-time dispatch, analytics, and CI/CD.",
-    fullDescription: `
-      A mission-critical enterprise software platform serving 50+ US law enforcement agencies, built with ASP.NET Core, C#, React, TypeScript, and SQL Server.
+{
+id: 1,
+title: "Public Safety Software Platform",
+category: ".NET Platform",
+badges: ["Enterprise", "ASP.NET Core", "React"],
+description:
+"Mission-critical enterprise software built with ASP.NET Core, React, SQL Server, and Azure DevOps, featuring real-time communication, compliance reporting, and system integrations.",
 
-      Responsible for system stabilization — resolved long-standing production issues and improved overall reliability. Built and maintained CI/CD pipelines using Azure DevOps, automating build, test, and deployment workflows across multiple environments.
 
-      Developed NIBRS compliance features and automated data broker integration for submitting standardized FBI crime reports to federal databases. Integrated SignalR real-time communication enabling live updates in emergency dispatch and reporting systems.
+image: "/projects/project1.jpg",
 
-      Designed and maintained microservice-based integrations for secure data exchange across public safety systems. Led a team of 4-6 developers — code reviews, technical mentoring, sprint planning, and delivery ownership.`,
-    image: "/projects/project1.jpg",
-    tags: ["ASP.NET Core", "C#", "React", "TypeScript", "Node.js", "SignalR", "SQL Server", "Azure DevOps"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: true,
-    accentColor: "from-orange-500 to-amber-500",
-    status: "Live",
-    highlights: [
-      "Platform for 50+ US law enforcement agencies",
-      "CI/CD pipelines via Azure DevOps",
-      "SignalR real-time emergency dispatch",
-      "Led team of 4-6 developers",
-    ],
-  },
-  {
-    id: 2,
-    title: "AI-Powered Chatbot & Automation Agent",
-    category: "AI",
-    badges: ["AI", "Automation", "Claude API"],
-    description:
-      "Conversational AI chatbot with Claude API and automated WhatsApp messaging agent using Groq AI for end-to-end workflow automation.",
-    fullDescription: `
-      Built a conversational AI chatbot using Claude API with custom system prompts and multi-turn context management, ensuring TypeScript type safety throughout.
+tags: [
+  "ASP.NET Core",
+  "C#",
+  "React",
+  "TypeScript",
+  "Node.js",
+  "SignalR",
+  "SQL Server",
+  "Azure DevOps",
+],
 
-      Developed an automated WhatsApp messaging agent using Groq AI — end-to-end workflow automation with AI-driven message generation, configurable triggers, and real-time message handling.
+featured: true,
+accentColor: "from-orange-500 to-amber-500",
+status: "Live",
 
-      Evaluated and compared output quality across Claude, GPT, and Groq models, designing rubrics to assess accuracy, tone, and contextual relevance for different use cases.
+highlights: [
+  "Enterprise ASP.NET Core & React platform",
+  "Azure DevOps CI/CD automation",
+  "SignalR real-time communication",
+  "Led team of 4-6 developers",
+],
 
-      Demonstrates practical AI integration capability alongside enterprise .NET and React background.`,
-    image: "/projects/project5.png",
-    tags: ["Claude API", "OpenAI API", "Groq AI", "Node.js", "React", "TypeScript"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false,
-    accentColor: "from-violet-500 to-purple-500",
-    status: "Personal",
-    highlights: [
-      "Claude API with custom system prompts",
-      "Multi-turn context management",
-      "Automated WhatsApp messaging agent (Groq AI)",
-      "Cross-model quality evaluation",
-    ],
-  },
-  {
-    id: 3,
-    title: "Document E-Commerce Platform",
-    category: "E-Commerce",
-    badges: ["Enterprise", "E-Commerce", "CRM"],
-    description:
-      "Custom enterprise marketplace with digital product sales, subscription management, secure document delivery, and automated CRM synchronization.",
-    fullDescription: `
-      A custom enterprise marketplace built on nopCommerce with C# and ASP.NET Core, designed for digital document sales and subscription-based access.
 
-      Built custom nopCommerce extensions for digital product sales, subscription management, and secure document delivery. Integrated Microsoft Dynamics CRM, payment gateway APIs, and e-signature APIs for automated customer workflows.
+},
 
-      The platform handles user account management, subscription lifecycles, secure access control for digital assets, and automated CRM synchronization — ensuring customer data, transactions, and order history stay in sync across systems.
+{
+id: 2,
+title: "Document E-Commerce Platform",
+category: "E-Commerce",
+badges: ["Enterprise", "E-Commerce", "ASP.NET Core"],
+description:
+"Enterprise document marketplace with subscription management, payment processing, secure document delivery, CRM integration, and e-signature workflows.",
 
-      Built with a focus on performance, security, and scalability for real-world commercial use.`,
-    image: "/projects/project4.png",
-    tags: ["nopCommerce", "C#", "ASP.NET Core", "Payment APIs", "E-signature APIs", "MS Dynamics CRM"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false,
-    accentColor: "from-orange-500 to-rose-500",
-    status: "Live",
-    highlights: [
-      "Custom nopCommerce extensions",
-      "Subscription & digital document delivery",
-      "Payment gateway & e-signature APIs",
-      "Microsoft Dynamics CRM sync",
-    ],
-  },
+
+image: "/projects/project4.png",
+
+tags: [
+  "nopCommerce",
+  "ASP.NET Core",
+  "C#",
+  "SQL Server",
+  "Payment APIs",
+  "E-Signature APIs",
+  "Microsoft Dynamics CRM",
+],
+
+featured: false,
+accentColor: "from-orange-500 to-rose-500",
+status: "Live",
+
+highlights: [
+  "Subscription management",
+  "Secure digital document delivery",
+  "Payment & e-signature integrations",
+  "Microsoft Dynamics CRM integration",
+],
+
+},
+
+{
+id: 3,
+title: "Enterprise HRMS Platform",
+category: "Business Software",
+badges: ["HRMS", "Enterprise", ".NET"],
+description:
+"Enterprise workforce management platform supporting performance management, timesheet tracking, employee productivity analytics, and business workflow automation.",
+
+
+image: "/projects/project5.png",
+
+tags: [
+  "ASP.NET",
+  "C#",
+  "SQL Server",
+  "JavaScript",
+  "jQuery",
+  "AJAX",
+  "REST APIs",
+],
+
+featured: false,
+accentColor: "from-blue-500 to-cyan-500",
+status: "Live",
+
+highlights: [
+  "Performance Management System",
+  "Timesheet Management System",
+  "SQL reporting & analytics",
+  "Workflow automation",
+],
+
+
+},
+
+{
+id: 4,
+title: "AI Customer Support & Automation Platform",
+category: "AI Integration",
+badges: ["AI Integration", "Automation", "Personal Project"],
+description:
+"Conversational AI platform leveraging Claude and OpenAI APIs for chatbot experiences, workflow automation, and intelligent customer interactions.",
+
+
+image: "/projects/project7.png",
+
+tags: [
+  "Claude API",
+  "OpenAI API",
+  "Node.js",
+  "React",
+  "TypeScript",
+  "Prompt Engineering",
+],
+
+featured: false,
+accentColor: "from-violet-500 to-purple-500",
+status: "Personal",
+
+highlights: [
+  "Claude & OpenAI API integration",
+  "AI workflow automation",
+  "Multi-turn conversation management",
+  "Prompt engineering & evaluation",
+],
+},
 ];
+
 
 const categoryColors = {
   Enterprise:

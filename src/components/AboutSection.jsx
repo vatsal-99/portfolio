@@ -139,9 +139,10 @@ const tabContent = {
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Senior Full Stack Developer with 5+ years of enterprise experience — ASP.NET Core backend,
-            React frontend, and nearly 4 years on a mission-critical platform serving
-            50+ US law enforcement agencies.
+            Senior Full Stack Developer with 5+ years of experience building scalable
+            enterprise applications using ASP.NET Core, C#, React, TypeScript, SQL
+            Server, and Azure DevOps. Passionate about designing reliable software,
+            modern user experiences, and high-performance backend systems.
           </p>
         </div>
 

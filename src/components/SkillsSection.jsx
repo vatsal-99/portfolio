@@ -16,22 +16,28 @@ import netIcon from "@/assets/icons/net.png";
 import SQLIcon from "@/assets/icons/sql.png";
 import CursorIcon from "@/assets/icons/cursor.png";
 import CSharpIcon from "@/assets/icons/Csharp.png";
+import restIcon from "@/assets/icons/rest.png";
+import microservicesIcon from "@/assets/icons/microservice.png";
+import signalRIcon from "@/assets/icons/signalr.png";
+import cicdIcon from "@/assets/icons/cicd.png";
+import claudeIcon from "@/assets/icons/claude.png";
+import openaiIcon from "@/assets/icons/openai.png";
 
 const skills = [
   // Frontend — Primary (90%+)
-  { name: "React", level: 92, category: "frontend", icon: "react" },
+  { name: "React", level: 90, category: "frontend", icon: "react" },
   { name: "TypeScript", level: 90, category: "frontend", icon: "typescript" },
   { name: "JavaScript", level: 90, category: "frontend", icon: "javascript" },
-  { name: "HTML5", level: 88, category: "frontend", icon: "html" },
+  { name: "HTML5", level: 85, category: "frontend", icon: "html" },
   { name: "CSS3", level: 85, category: "frontend", icon: "css" },
 
   // Backend — Primary (90%+) and Strong (80%+)
-  { name: "ASP.NET Core", level: 92, category: "backend", icon: "net" },
+  { name: "ASP.NET Core", level: 90, category: "backend", icon: "net" },
   { name: "C#", level: 90, category: "backend", icon: "csharp" },
-  { name: "REST APIs", level: 90, category: "backend", icon: "net", letterIcon: "API" },
-  { name: "Node.js", level: 82, category: "backend", icon: "nodejs" },
-  { name: "Microservices", level: 80, category: "backend", letterIcon: "MS" },
-  { name: "SignalR", level: 80, category: "backend", letterIcon: "SR" },
+  { name: "REST APIs", level: 90, category: "backend", icon: "rest" },
+  { name: "Node.js", level: 85, category: "backend", icon: "nodejs" },
+  { name: "Microservices", level: 80, category: "backend", icon: "microservices" },
+  { name: "SignalR", level: 80, category: "backend", icon: "signalr" },
 
   // Database
   { name: "SQL Server", level: 88, category: "database", icon: "sql" },
@@ -39,13 +45,13 @@ const skills = [
 
   // Tools & DevOps — Strong (80%+) and Additional (70%+)
   { name: "Git / GitHub", level: 90, category: "technologies", icon: "github" },
-  { name: "Azure DevOps", level: 82, category: "technologies", icon: "git", letterIcon: "ADO" },
-  { name: "CI/CD Pipelines", level: 80, category: "technologies", icon: "git", letterIcon: "CI" },
-  { name: "VS Code", level: 88, category: "technologies", icon: "vscode" },
-  { name: "Claude API", level: 75, category: "technologies", icon: "cursor", letterIcon: "AI" },
-  { name: "OpenAI API", level: 72, category: "technologies", letterIcon: "OAI" },
-  { name: "Python", level: 72, category: "technologies", icon: "python" },
-  { name: "Azure Cloud", level: 70, category: "technologies", letterIcon: "AZ" },
+  { name: "Cursor", level: 80, category: "technologies", icon: "cursor"},
+  { name: "CI/CD Pipelines", level: 80, category: "technologies", icon: "cicd" },
+  { name: "VS Code", level: 90, category: "technologies", icon: "vscode" },
+  { name: "Claude API", level: 75, category: "technologies", icon: "claude" },
+  { name: "OpenAI API", level: 70, category: "technologies", icon: "openai" },
+  { name: "Python", level: 60, category: "technologies", icon: "python" },
+  // { name: "Azure Cloud", level: 70, category: "technologies" },
 ];
 
 const categories = [
@@ -72,6 +78,12 @@ const iconImages = {
   sql: SQLIcon,
   cursor: CursorIcon,
   csharp: CSharpIcon,
+  rest: restIcon,
+  microservices: microservicesIcon,
+  signalr: signalRIcon,
+  cicd: cicdIcon,
+  claude: claudeIcon,
+  openai: openaiIcon,
 };
 
 const SkillBar = ({ level }) => (
@@ -98,7 +110,7 @@ const SkillIcon = ({ skill }) => {
     <img
       src={iconImages[skill.icon]}
       alt=""
-      className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+      className="h-full w-auto object-contain"
     />
   );
 };
